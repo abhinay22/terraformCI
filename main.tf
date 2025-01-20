@@ -19,7 +19,6 @@ provider "azurerm" {
   features {
 
   }
-  version = "~>3.43.0"
 }
 resource "azurerm_resource_group" "newappgrooup" {
   name     = "storagegrp3452"
