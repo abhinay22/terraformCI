@@ -27,8 +27,8 @@ resource "azurerm_resource_group" "newappgrooup" {
 }
 
 resource "azurerm_storage_account" "ssstorage" {
-  resource_group_name      = azurerm_resource_group.storageresourcegroupm1.name
-  location                 = azurerm_resource_group.storageresourcegroupm1.location
+  resource_group_name      = azurerm_resource_group.newappgrooup.name
+  location                 = azurerm_resource_group.newappgrooup.location
   name                     = "mlstoragebs00123"
   account_tier             = "Standard"
   account_replication_type = "RAGRS"
