@@ -35,7 +35,7 @@ resource "azurerm_storage_account" "ssstorage" {
 resource "azurerm_app_service_plan" "new_appsvc_plan" {
   name                = "newappserviceplan"
   location            = azurerm_resource_group.newappgrooup3.location
-  resource_group_name = azurerm_resource_group.newappgnewappgrooup3rooup.name
+  resource_group_name = azurerm_resource_group.newappgrooup3.name
   sku {
     tier = "Premium"
     size = "S2"
