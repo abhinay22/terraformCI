@@ -11,7 +11,7 @@ terraform {
     organization = "sunnyorg"
 
     workspaces {
-      name = "remotestate"
+      name = "terrormciproj"
     }
   }
 }
