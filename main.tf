@@ -20,32 +20,32 @@ provider "azurerm" {
 
   }
 }
-resource "azurerm_resource_group" "newappgrooup" {
-  name     = "storagegrp3452"
-  location = "Central US"
+resource "azurerm_resource_group" "newappgrooup3" {
+  name     = "storagegrp3152"
+  location = "Australia Central 2"
 }
 
 resource "azurerm_storage_account" "ssstorage" {
-  resource_group_name      = azurerm_resource_group.newappgrooup.name
-  location                 = azurerm_resource_group.newappgrooup.location
-  name                     = "mlstoragebs00123"
+  resource_group_name      = azurerm_resource_group.newappgrooup3.name
+  location                 = azurerm_resource_group.newappgrooup3.location
+  name                     = "mlstoragebs0012399"
   account_tier             = "Standard"
   account_replication_type = "RAGRS"
 }
 resource "azurerm_app_service_plan" "new_appsvc_plan" {
   name                = "newappserviceplan"
-  location            = azurerm_resource_group.newappgrooup.location
-  resource_group_name = azurerm_resource_group.newappgrooup.name
+  location            = azurerm_resource_group.newappgrooup3.location
+  resource_group_name = azurerm_resource_group.newappgnewappgrooup3rooup.name
   sku {
-    tier = "standard"
-    size = "s1"
+    tier = "Premium"
+    size = "S2"
   }
 
 }
 
 resource "azurerm_app_service" "newappsvc349" {
-  resource_group_name = azurerm_resource_group.newappgrooup.name
-  location            = azurerm_resource_group.newappgrooup.location
+  resource_group_name = azurerm_resource_group.newappgrooup3.name
+  location            = azurerm_resource_group.newappgrooup3.location
   name                = "newappservice234"
   app_service_plan_id = azurerm_app_service_plan.new_appsvc_plan.id
 
