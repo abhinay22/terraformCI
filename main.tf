@@ -22,7 +22,7 @@ provider "azurerm" {
 }
 resource "azurerm_resource_group" "newappgrooup3" {
   name     = "storagegrp3152"
-  location = "Australia Central 2"
+  location = "Italy North"
 }
 
 resource "azurerm_storage_account" "ssstorage" {
